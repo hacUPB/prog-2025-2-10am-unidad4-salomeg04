@@ -7,4 +7,6 @@ estado = ["despegue", "ascenso inicial", "ascenso", "ascenso", "ascenso", "nivel
 # Imprimir informe de despegue
 print("INFORME DE DESPEGUE:")
 for t, a, v, est in zip(tiempo, altitud, velocidad, estado):
-    print(f"T+{t}s: Altitud={a}m, Velocidad={v}km/h, Fase={act}")
+    print(f"T+{t}s: Altitud={a}m, Velocidad={v}km/h, Fase={est}")
+for t in tiempo:
+    print(t)
