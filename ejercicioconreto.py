@@ -16,7 +16,7 @@ def simulacion1():
     "tiempo_transcurrido": 0
     }
 
-   
+    registro_altitud = [ ]
 
     while avion["altitud_actual"] < avion ["altitud_objetivo"]:
             print(f"\nTiempo: {avion["tiempo_transcurrido"]} segundos")
@@ -36,10 +36,13 @@ def simulacion1():
                 avion["angulo_ataque"] = float(input("Ingrese nuevo ángulo de ascenso (en grados): "))
 
             avion["altitud_actual"] = avion["velocidad_ascenso"] * math.sin(math.radians(avion["angulo_ataque"])) * avion["tiempo_transcurrido"]
+            registro_altitud.append(avion["altitud_actual"])
+            
             avion["tiempo_transcurrido"] += 1
 
 
     print("\n¡El avión alcanzó la altitud objetivo!")
     print(f"Altitud final: {avion["altitud_actual"]:.2f}")
-    
+    print(f" Registro de altitudes: {registro_altitud}")
+
 simulacion1()
