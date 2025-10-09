@@ -1,7 +1,7 @@
 import math
 import random
 
-# Función para solicitar al usuario los datos iniciales del vuelo
+
 def pedir_datos():
     va = float(input("Ingrese la velocidad de ascenso de la aeronave: "))
     ao = float(input("Ingrese la altitud objetivo: "))
@@ -15,7 +15,7 @@ def pedir_datos():
     }
     return avion
 
-# Función principal que simula el ascenso del avión con control manual del usuario
+
 def simular_ascenso(avion):
     registro_altitud = []
 
@@ -40,7 +40,6 @@ def simular_ascenso(avion):
 
     return registro_altitud
 
-# Función para mostrar estadísticas finales del vuelo (altitud final, promedio, máximo, mínimo)
 def mostrar_resultados(registro_altitud):
     print("\n¡El avión alcanzó la altitud objetivo!")
     print(f"Altitud final: {registro_altitud[-1]:.2f}")
@@ -53,7 +52,7 @@ def mostrar_resultados(registro_altitud):
     print(f"Mayor altitud: {mayor_altitud:.2f} m")
     print(f"Menor altitud: {menor_altitud:.2f} m")
 
-# funcion para imprimir listas y diccionarios
+
 def imprimir_datos(avion, registro):
     print("datos del avion")
     for clave, valor in avion.items():
@@ -65,7 +64,7 @@ def imprimir_datos(avion, registro):
         print(f"{altitud:.2f}", end="  ")
     print("\n")
 
-# Función principal que maneja el menú del simulador y orquesta todas las demás funciones
+
 def simulacion1():
     control = True
 
@@ -73,7 +72,6 @@ def simulacion1():
         opcion = int(input("Seleccione una opción:\n1. Simulador\n2. listas y diccionarios\n3. salir\nElija una opcion:"))
         match opcion:
             case 1:
-            #Aca llamos a las funciones pedir_datos, simular_ascenso y mostrar_resultados
                 avion = pedir_datos()
                 registro = simular_ascenso(avion)
                 mostrar_resultados(registro)
