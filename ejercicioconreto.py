@@ -43,6 +43,6 @@ def simulacion1():
 
     print("\n¡El avión alcanzó la altitud objetivo!")
     print(f"Altitud final: {avion["altitud_actual"]:.2f}")
-    print(f" Registro de altitudes: {registro_altitud}")
+    print(f" Registro de altitudes: {registro_altitud:.2f}")
 
 simulacion1()
