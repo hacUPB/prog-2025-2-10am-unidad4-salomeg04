@@ -42,7 +42,15 @@ def simulacion1():
 
 
     print("\n¡El avión alcanzó la altitud objetivo!")
-    print(f"Altitud final: {avion["altitud_actual"]:.2f}")
-    print(f" Registro de altitudes: {registro_altitud:.2f}")
+    print(f"Altitud final: {avion["altitud_actual"]}")
+    print(f" Registro de altitudes: {registro_altitud}")
+
+    promedio_altitud = sum(registro_altitud) / len(registro_altitud)
+    mayor_altitud = max(registro_altitud)
+    menor_altitud = min(registro_altitud)
+
+    print(f"\nPromedio de altitudes registradas: {promedio_altitud:.2f} m")
+    print(f"Mayor altitud alcanzada: {mayor_altitud:.2f} m")
+    print(f"Menor altitud registrada: {menor_altitud:.2f} m")
 
 simulacion1()
