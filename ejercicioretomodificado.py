@@ -70,7 +70,7 @@ def simulacion1():
     control = True
 
     while control:
-        opcion = int(input("Seleccione una opción:\n1. Simulador\n2. listas y diccionarios\n3. salir\n1"))
+        opcion = int(input("Seleccione una opción:\n1. Simulador\n2. listas y diccionarios\n3. salir\nElija una opcion:"))
         match opcion:
             case 1:
             #Aca llamos a las funciones pedir_datos, simular_ascenso y mostrar_resultados
